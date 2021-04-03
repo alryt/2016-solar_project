@@ -25,6 +25,10 @@ time_step = None
 space_objects = []
 """Список космических объектов."""
 
+time_speed = None
+space = None
+start_button = None
+
 
 def execution():
     """Функция исполнения -- выполняется циклически, вызывая обработку всех небесных тел,
@@ -147,6 +151,7 @@ def main():
 
     root.mainloop()
     print('Modelling finished!')
+
 
 if __name__ == "__main__":
     main()
