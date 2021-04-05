@@ -2,6 +2,7 @@
 # license: GPLv3
 
 import tkinter
+
 from tkinter.filedialog import *
 from solar_vis import *
 from solar_model import *
@@ -9,7 +10,6 @@ from solar_input import *
 
 perform_execution = False
 """Флаг цикличности выполнения расчёта"""
-
 physical_time = 0
 """Физическое время от начала расчёта.
 Тип: float"""
@@ -25,10 +25,6 @@ time_step = None
 space_objects = []
 """Список космических объектов."""
 
-time_speed = None
-space = None
-start_button = None
-
 
 def execution():
     """Функция исполнения -- выполняется циклически, вызывая обработку всех небесных тел,
@@ -36,7 +32,6 @@ def execution():
     Цикличность выполнения зависит от значения глобальной переменной perform_execution.
     При perform_execution == True функция запрашивает вызов самой себя по таймеру через от 1 мс до 100 мс.
     """
-    
     global physical_time
     global displayed_time
     recalculate_space_objects_positions(space_objects, time_step.get())
