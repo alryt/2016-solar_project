@@ -2,11 +2,14 @@
 # license: GPLv3
 
 import tkinter
-
 from tkinter.filedialog import *
 from solar_vis import *
 from solar_model import *
 from solar_input import *
+
+time_speed = 0
+space = 0
+start_button = 0
 
 perform_execution = False
 """Флаг цикличности выполнения расчёта"""
